@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Paleta extraída de public/logo.svg */
+  --color-sage-50: #f2f5ef;
+  --color-sage-100: #e3eadb;
+  --color-sage-200: #c8d7bf;
+  --color-sage-300: #a0b68b;
+  --color-sage-400: #7d9968;
+  --color-sage-500: #47704c;
+  --color-sage-600: #3a5c3f;
+  --color-sage-700: #2e4833;
+  --color-sage-800: #243829;
+  --color-sage-900: #1a2820;
+
+  --color-clay-50: #fbf4ef;
+  --color-clay-100: #f5e6dc;
+  --color-clay-200: #ecd2c2;
+  --color-clay-300: #e0b7a1;
+  --color-clay-400: #d99c80;
+  --color-clay-500: #db9479;
+  --color-clay-600: #d4795c;
+  --color-clay-700: #daa794;
+  --color-clay-800: #b9664c;
+  --color-clay-900: #8f4a36;
+
+  --color-sand-50: #fdfaf7;
+  --color-sand-100: #f9f1e9;
+  --color-sand-200: #f1ddcd;
+  --color-sand-300: #e6cfbb;
+  --color-sand-400: #d9bfa8;
+  --color-sand-500: #c4a78f;
+
+  --color-ink-500: #7b7167;
+  --color-ink-700: #4d4640;
+  --color-ink-900: #2c2723;
+
+  --font-sans: var(--font-nunito);
+  --font-serif: var(--font-fraunces);
+
+  --radius-card: 1rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    background-color: var(--color-sand-50);
+    color: var(--color-ink-900);
+  }
+
+  ::selection {
+    background-color: var(--color-sage-200);
+    color: var(--color-sage-900);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-sage-500);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .balance {
+    text-wrap: balance;
+  }
+
+  .pretty {
+    text-wrap: pretty;
+  }
+}
